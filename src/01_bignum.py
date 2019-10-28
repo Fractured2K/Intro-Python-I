@@ -2,3 +2,9 @@
 # (try doing the same thing in the JS console and see what it outputs)
 
 # YOUR CODE HERE
+
+# Power operator
+print(2 ** 65536)
+
+# Pow function
+print(pow(2, 65536))
