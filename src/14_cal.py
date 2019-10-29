@@ -22,3 +22,23 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+date = datetime.now()
+argsLength = len(sys.argv)
+
+
+def argsDate(num):
+    return int(sys.argv[num])
+
+
+if argsLength == 1:
+    date = date
+elif argsLength == 2:
+    date = datetime(date.year, argsDate(1), 1)
+elif argsLength == 3:
+    date = datetime(argsDate(1), argsDate(2), 1)
+else:
+    print('Enter a year e.g 2019 and month e.g 9 to print out that calendar year and month')
+    sys.exit()
+
+print(calendar.month(date.year, date.month))
